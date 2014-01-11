@@ -23,10 +23,10 @@ function loadPost(pid, localport, ifPageTitle) {
 	ajaxContent.send();
 	jsonPost = ajaxContent.responseText;
 
-	if (postIndex.list[pid].postTitle == "") {
+	if (postIndex.list[pid].pt == "") {
 		document.getElementById("post" + localport + "h2").style.display = "none";
 	} else {
-		document.getElementById("post" + localport + "title").innerHTML = postIndex.list[pid].postTitle;
+		document.getElementById("post" + localport + "title").innerHTML = postIndex.list[pid].pt;
 		document.getElementById("post" + localport + "title").href = "./?p=" + pid;
 	}
 	if (jsonPost == undefined) {
@@ -34,19 +34,19 @@ function loadPost(pid, localport, ifPageTitle) {
 	} else {
 		document.getElementById("post" + localport + "text").innerHTML = jsonPost;
 	}
-	document.getElementById("post" + localport + "link").innerHTML = postIndex.list[pid].postDate;
+	document.getElementById("post" + localport + "link").innerHTML = postIndex.list[pid].pd;
 	document.getElementById("post" + localport + "link").href = "./?p=" + pid;
 	document.getElementById("post" + localport).style.display = "block";
 	if (multiUser == "on") {
-		var author = postIndex.list[pid].postAuthor;
+		var author = postIndex.list[pid].pa;
 		document.getElementById("post" + localport + "author").href = postIndex.users[author].userURL;
 		document.getElementById("post" + localport + "author").innerHTML = postIndex.users[author].userName;
 		document.getElementById("post" + localport + "author").style.display = "inline";
 		document.getElementById("post" + localport + "img").src = "/pic/" + author + ".jpg";
 	}
-	if (ifPageTitle == 1 && postIndex.list[pid].postTitle != "") {
-		document.getElementById("page-title").innerHTML = postIndex.list[pid].postTitle + " — " + blogName;
-	} else if (ifPageTitle == 1 && postIndex.list[pid].postTitle == "") {
+	if (ifPageTitle == 1 && postIndex.list[pid].pt != "") {
+		document.getElementById("page-title").innerHTML = postIndex.list[pid].pt + " — " + blogName;
+	} else if (ifPageTitle == 1 && postIndex.list[pid].pt == "") {
 		document.getElementById("page-title").innerHTML = "Post #" + pid + " — " + blogName;
 	} else {
 		document.getElementById("page-title").innerHTML = blogName;
