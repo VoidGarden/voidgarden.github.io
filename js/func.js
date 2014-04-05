@@ -36,8 +36,8 @@ function createSection(pid) {
 
 	var avatar = document.createElement("img")
 	var author = document.createElement("a")
-	avatar.setAttribute("id", "post" + i + "img")
-	author.setAttribute("id", "post" + i + "author")
+	avatar.setAttribute("id", "post" + pid + "img")
+	author.setAttribute("id", "post" + pid + "author")
 	author.setAttribute("class", "post-author")
 	footer.appendChild(avatar)
 	footer.appendChild(document.createTextNode("&copy; "))
@@ -62,7 +62,8 @@ function loadPost(pid) {
 
 	// Void Garden special edition start
 
-	document.getElementById("post" + pid + "img").src = "/pic/" + postIndex.list[i].Author + ".png"
+	document.getElementById("post" + pid + "img").src = "/pic/" + postIndex.list[pid].Author + ".png"
+	document.getElementById("post" + pid + "author").href = postIndex.users[postIndex.list[pid].Author].userURL
 
 	// Void Garden special edition end
 
