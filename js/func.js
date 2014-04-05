@@ -3,7 +3,7 @@ Core file of NeopBlog
 ------------------------------------------
 File meta info:
 	File Name: func.js
-	File Version: 0.9.3
+	File Version: 0.9.4
 	File Status: Beta
 	File Branch: Master
 ------------------------------------------
@@ -58,7 +58,7 @@ function createSection(pid) {
 function loadPost(pid) {
 	ajaxContent.open("GET", "db/" + pid + ".txt", false)
 	ajaxContent.send()
-	receivedPostText = ajaxContent.responseText
+	var receivedPostText = ajaxContent.responseText
 
 	// Void Garden special edition start
 
