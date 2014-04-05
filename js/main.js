@@ -47,7 +47,6 @@ var sectionsCreated = 0
 
 var cont = document.getElementById("cont")
 
-
 if (postId != "NULL") {
 	var ifSinglePost = 1
 	if (blogMetaData.comments == "on") {
@@ -65,9 +64,9 @@ if (postId != "NULL") {
 	} else if (postId == 0) {
 		fillNav(prevpost, nextpost, 0, 1)
 	} else if (postId < 0) {
-		httpError("404")
+		httpError()
 	} else if (postId > theLatestPostId) {
-		httpError("404")
+		httpError()
 	} else {
 		fillNav(prevpost, nextpost, 1, 1)
 	}
