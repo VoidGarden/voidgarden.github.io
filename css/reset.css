@@ -62,7 +62,6 @@ section.post, .comment-container {
 	padding: 20px 60px 45px;
 	margin-top: 30px;
 	margin-bottom: 80px;
-	display: none;
 }
 
 section.post h2 {
@@ -72,13 +71,16 @@ section.post h2 {
 
 p {
 	font-size: 17px;
-	line-height: 26px;
 	margin: 18px 0;
 }
 
 section.post footer {
 	font-size: 16px;
 	margin: 40px 0 0;
+}
+
+aside.sidebar {
+	display: none;
 }
 
 .post-text > img {
@@ -91,6 +93,10 @@ blockquote, pre {
 	margin-bottom: 18px;
 	margin-left: auto;
 	margin-right: auto;
+}
+
+blockquote cite {
+	padding: 0 8px;
 }
 
 section.post > footer {
