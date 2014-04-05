@@ -62,8 +62,10 @@ function loadPost(pid) {
 
 	// Void Garden special edition start
 
-	document.getElementById("post" + pid + "img").src = "/pic/" + postIndex.list[pid].Author + ".png"
-	document.getElementById("post" + pid + "author").href = postIndex.users[postIndex.list[pid].Author].userURL
+	var aid = postIndex.list[pid].Author
+	document.getElementById("post" + pid + "img").src = "/pic/" + aid + ".png"
+	document.getElementById("post" + pid + "author").innerHTML = postIndex.users[aid].userName
+	document.getElementById("post" + pid + "author").href = postIndex.users[aid].userURL
 
 	// Void Garden special edition end
 
