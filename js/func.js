@@ -63,7 +63,7 @@ function loadPost(pid) {
 	// Void Garden special edition start
 
 	var aid = postIndex.list[pid].Author
-	document.getElementById("post" + pid + "img").src = "/pic/" + aid + ".png"
+	document.getElementById("post" + pid + "img").src = "/pic/" + aid + ".jpg"
 	document.getElementById("post" + pid + "author").innerHTML = postIndex.users[aid].userName
 	document.getElementById("post" + pid + "author").href = postIndex.users[aid].userURL
 
