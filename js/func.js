@@ -40,7 +40,7 @@ function createSection(pid) {
 	author.setAttribute("id", "post" + pid + "author")
 	author.setAttribute("class", "post-author")
 	footer.appendChild(avatar)
-	footer.appendChild(document.createTextNode("&copy; "))
+	footer.appendChild(document.createTextNode("© "))
 	footer.appendChild(author)
 	footer.appendChild(document.createTextNode(" 发表于 "))
 
